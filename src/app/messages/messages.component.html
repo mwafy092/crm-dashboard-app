@@ -1,0 +1,11 @@
+<div class="messages__interval" *ngIf="messages.length > 0">
+  <div class="message__container" *ngFor="let message of messages">
+    <p class="message__header">
+      message
+      <button class="message__close__btn" (click)="close(message)">X</button>
+    </p>
+    <p class="message__content">
+      {{ message }}
+    </p>
+  </div>
+</div>

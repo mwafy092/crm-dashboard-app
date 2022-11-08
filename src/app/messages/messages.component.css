@@ -1,0 +1,58 @@
+.messages__interval {
+  top: 90px;
+  right: 5px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.message__container {
+  animation: fadeInRight 1s ease-in-out;
+  background-color: rgb(91, 104, 124);
+  min-width: 250px;
+  width: fit-content;
+  border-radius: 20px 0 20px 0;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  position: relative;
+  cursor: pointer;
+}
+
+.message__header {
+  background-color: rgb(71, 133, 160);
+  padding: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  margin: 0;
+}
+.message__close__btn {
+  background-color: rgb(48, 100, 152);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: -2px;
+  cursor: pointer;
+}
+.message__content {
+  padding: 5px;
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  to {
+    opacity: 1;
+  }
+}

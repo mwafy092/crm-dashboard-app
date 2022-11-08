@@ -1,0 +1,90 @@
+<div class="add__customer__container">
+  <form [formGroup]="customerForm" (submit)="submit()">
+    <h1>Add New Customer</h1>
+    <div class="form__input__unit">
+      <input
+        type="text"
+        placeholder="Customer Name"
+        formControlName="name"
+        [formControl]="name"
+      />
+      <div [hidden]="name.valid || name.untouched">
+        <div [hidden]="!name.hasError('minlength')" class="error">
+          Name should be at least 4 characters
+        </div>
+        <div [hidden]="!name.hasError('required')" class="error">
+          Name is required
+        </div>
+      </div>
+    </div>
+    <div class="form__input__unit">
+      <input
+        type="number"
+        placeholder="Customer Age"
+        formControlName="age"
+        [formControl]="age"
+      />
+      <div [hidden]="age.valid || age.untouched">
+        <div [hidden]="!age.hasError('required')" class="error">
+          Age is required
+        </div>
+      </div>
+    </div>
+    <div class="form__input__unit">
+      <input
+        type="email"
+        placeholder="Customer Email"
+        formControlName="email"
+        [formControl]="email"
+      />
+      <div [hidden]="email.valid || email.untouched">
+        <div [hidden]="!email.hasError('required')" class="error">
+          Email is required
+        </div>
+        <div [hidden]="!email.hasError('email')" class="error">
+          Email is not valid
+        </div>
+      </div>
+    </div>
+    <div class="form__input__unit">
+      <input
+        type="text"
+        placeholder="Customer Phone"
+        formControlName="phone"
+        [formControl]="phone"
+      />
+      <div [hidden]="phone.valid || phone.untouched">
+        <div [hidden]="!phone.hasError('minlength')" class="error">
+          Phone number must be 11 number
+        </div>
+        <div [hidden]="!phone.hasError('maxLength')" class="error">
+          Phone number must be 11 number
+        </div>
+        <div [hidden]="!phone.hasError('required')" class="error">
+          Phone is required
+        </div>
+      </div>
+    </div>
+    <div class="form__input__unit">
+      <input
+        type="role"
+        placeholder="Customer Role"
+        formControlName="role"
+        [formControl]="role"
+      />
+      <div [hidden]="role.valid || role.untouched">
+        <div [hidden]="!role.hasError('required')" class="error">
+          Role is required
+        </div>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="form__submit__btn"
+      [disabled]="!submitIsValid()"
+    >
+      Add Customer
+    </button>
+  </form>
+</div>

@@ -1,0 +1,11 @@
+<nav class="navbar">
+  <div class="navbar__logo">Customer Management</div>
+  <ul class="navbar__left">
+    <li *ngIf="status === 'true'"><a routerLink="/">Dashboard</a></li>
+    <li *ngIf="status !== 'true'"><a routerLink="/login">Login</a></li>
+    <li *ngIf="status !== 'true'"><a routerLink="/register">Register</a></li>
+    <li *ngIf="status === 'true'">
+      <a (click)="logout()" class="logout__button">Logout</a>
+    </li>
+  </ul>
+</nav>

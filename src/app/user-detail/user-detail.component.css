@@ -1,0 +1,28 @@
+.user-detail-container {
+  font-size: 15px;
+}
+.detail-value {
+  font-size: 20px;
+}
+.detail-label {
+  color: #777;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.user-detail-header {
+  text-decoration: underline;
+  margin: 20px 0;
+}
+
+.edit-user {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-user label {
+  font-weight: bold;
+  font-size: 20px;
+}

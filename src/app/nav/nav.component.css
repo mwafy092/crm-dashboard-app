@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #011847;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  color: #fff;
+  height: 80px;
+}
+
+.navbar__logo {
+  font-size: 30px;
+}
+
+.navbar__left {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar__left li {
+  list-style: none;
+  font-size: 18px;
+}
+
+.navbar__left li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.logout__button {
+  cursor: pointer;
+}

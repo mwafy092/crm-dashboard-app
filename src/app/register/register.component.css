@@ -1,0 +1,10 @@
+.register__container {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+}

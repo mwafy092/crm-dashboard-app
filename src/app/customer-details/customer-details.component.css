@@ -1,0 +1,32 @@
+.customer__details {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  width: 70vw;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+.customer__detail {
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+}
+
+.back__button {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  margin: 40px;
+  color: #5487ee;
+  width: fit-content;
+  text-decoration: underline;
+}
+
+.back__button:hover {
+  transition: all 0.3s ease-in-out;
+  color: #0c41aa;
+}

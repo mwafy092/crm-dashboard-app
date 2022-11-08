@@ -1,0 +1,51 @@
+<div class="update__customer">
+  <div class="add__customer__container">
+    <form [formGroup]="customerForm" (submit)="saveUser()">
+      <h1>Update Customer Information</h1>
+      <div class="form__input__unit">
+        <input
+          type="text"
+          placeholder="Customer Name"
+          formControlName="name"
+          [formControl]="name"
+        />
+      </div>
+      <div class="form__input__unit">
+        <input
+          type="number"
+          placeholder="Customer Age"
+          formControlName="age"
+          [formControl]="age"
+        />
+      </div>
+      <div class="form__input__unit">
+        <input
+          type="email"
+          placeholder="Customer Email"
+          formControlName="email"
+          [formControl]="email"
+        />
+      </div>
+      <div class="form__input__unit">
+        <input
+          type="text"
+          placeholder="Customer Phone"
+          formControlName="phone"
+          [formControl]="phone"
+        />
+      </div>
+      <div class="form__input__unit">
+        <input
+          type="role"
+          placeholder="Customer Role"
+          formControlName="role"
+          [formControl]="role"
+        />
+      </div>
+
+      <button type="submit" class="form__submit__btn">
+        Update Customer Details
+      </button>
+    </form>
+  </div>
+</div>

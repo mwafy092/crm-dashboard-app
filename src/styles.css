@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.form__input__unit input {
+  border: none;
+  border-bottom: 2px solid #444;
+  width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+.form__input__unit input:focus {
+  outline: none;
+}
+
+.form__submit__btn {
+  padding: 10px;
+  font-size: 18px;
+  background-color: #236aff;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+.form__submit__btn:hover {
+  box-shadow: none;
+  background-color: #2388d2;
+}
+
+.message {
+  background-color: green;
+  width: 80vw;
+  margin: auto;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  position: fixed;
+  z-index: 9999999;
+  top: 80px;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+*:disabled {
+  background-color: dimgrey;
+  color: linen;
+  opacity: 1;
+}
+*:disabled:hover {
+  background-color: dimgrey;
+  color: linen;
+  opacity: 1;
+}

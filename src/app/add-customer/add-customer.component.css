@@ -1,0 +1,11 @@
+.add__customer__container {
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+}

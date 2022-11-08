@@ -1,0 +1,61 @@
+<div class="register__container">
+  <form [formGroup]="registerForm" (submit)="submit()">
+    <h1 class="h3 mb-3 fw-normal">Please register</h1>
+    <div class="form__input__unit">
+      <input
+        type="text"
+        placeholder="username"
+        formControlName="username"
+        [formControl]="username"
+      />
+      <div [hidden]="username.valid || username.untouched">
+        <div [hidden]="!username.hasError('minlength')" class="error">
+          Username can not be shorter than 4 characters.
+        </div>
+        <div [hidden]="!username.hasError('required')" class="error">
+          Username is required.
+        </div>
+      </div>
+    </div>
+    <div class="form__input__unit">
+      <input
+        type="email"
+        placeholder="email"
+        formControlName="email"
+        [formControl]="email"
+      />
+      <div [hidden]="email.valid || email.untouched">
+        <div [hidden]="!email.hasError('email')" class="error">
+          Not Valid Email
+        </div>
+        <div [hidden]="!email.hasError('required')" class="error">
+          Email is required.
+        </div>
+      </div>
+    </div>
+    <div class="form__input__unit">
+      <input
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+        [formControl]="password"
+      />
+      <div [hidden]="password.valid || password.untouched">
+        <div [hidden]="!password.hasError('minlength')" class="error">
+          Password should contain at least 8 characters
+        </div>
+        <div [hidden]="!password.hasError('required')" class="error">
+          Password is required
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="form__submit__btn"
+      type="submit"
+      [disabled]="!submitIsValid()"
+    >
+      Submit
+    </button>
+  </form>
+</div>

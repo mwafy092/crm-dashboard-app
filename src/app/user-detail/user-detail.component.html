@@ -1,0 +1,23 @@
+<h2 class="user-detail-header">User Details</h2>
+<div class="user-detail-container">
+  <h2 class="detail-value">
+    <span class="detail-label">Name:</span> {{ user?.username }}
+  </h2>
+  <h2 class="detail-value">
+    <span class="detail-label">Email:</span> {{ user?.email }}
+  </h2>
+</div>
+
+<div class="edit-user">
+  <label for="floatingInput">Edit Username</label>
+  <input
+    type="text"
+    class="form-control"
+    id="floatingInput"
+    placeholder="John"
+    [(ngModel)]="editedUser"
+  />
+  <button class="w-100 btn btn-lg btn-dark" type="submit" (click)="saveUser()">
+    Save
+  </button>
+</div>
