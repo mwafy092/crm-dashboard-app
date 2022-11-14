@@ -1,73 +1,140 @@
-.customers__container {
-  width: 80vw;
-  margin: 70px auto;
+.dashboard__container {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
-.customers__table {
+.cards__container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.card__container {
+  background-color: #25235c;
+  width: 400px;
+  height: 450px;
+  border-radius: 10px;
+  border-left: 8px solid #f7e01c;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px;
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.card__actions {
+  position: absolute;
+  right: -20px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7e01c;
+  padding: 5px;
+  gap: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.card__actions img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.card__profile {
+  border: 2px solid #f7e01c;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.card__profile img {
+  object-fit: contain;
   width: 100%;
-  margin: 0 auto;
+  display: block;
+  z-index: 10;
+}
+
+.card__main__info {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 10px 0;
+}
+.card__main__info p {
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
-th {
-  background-color: #2388d2;
-  color: #fff;
-  padding: 10px;
-}
-tr {
-  font-size: 18px;
-  font-weight: bold;
-  color: #555;
+.card__name {
+  font-size: 20px;
+  font-weight: 700;
 }
 
-.add__customer__button {
-  height: 40px;
+.card__role {
   font-size: 16px;
-  background-color: #2388d2;
-  color: #fff;
-  border: none;
+  color: #aaa;
+}
+
+.card__bio {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.card__contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card__email,
+.card__phone {
+  background-color: #6c62ba;
+  padding: 10px;
   border-radius: 5px;
-  cursor: pointer;
-  margin: 10px 0;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-}
-
-.button__add__icon {
-  font-size: 25px;
-  border-left: 2px solid #fff;
-  padding-left: 5px;
-}
-
-.dashboard__header {
-  text-align: left;
-  font-size: 22px;
-  color: #444;
-  margin-top: 20px;
-  width: 80vw;
-  margin: auto;
-}
-
-.customer__delete__btn {
-  background-color: transparent;
-  border: 1px solid #333;
-  border-radius: 4px;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.customer__show__btn {
   font-size: 14px;
-  text-decoration: none;
-  color: #333;
-  border: 1px solid #333;
-  padding: 5px;
-  border-radius: 4px;
+}
+.card__contact img {
+  width: 15px;
+}
+
+.add__button {
+  background-color: #25235c;
+  color: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+  padding: 10px;
   cursor: pointer;
-  color: #333;
-  font-weight: 100;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.add__button img {
+  width: 30px;
 }

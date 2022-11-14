@@ -2,7 +2,13 @@
   <div class="message__container" *ngFor="let message of messages">
     <p class="message__header">
       message
-      <button class="message__close__btn" (click)="close(message)">X</button>
+
+      <img
+        src="../../assets/icons/close.png"
+        class="message__close__btn"
+        (click)="close(message)"
+        data-cy="messageClose"
+      />
     </p>
     <p class="message__content">
       {{ message }}

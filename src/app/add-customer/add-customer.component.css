@@ -9,3 +9,32 @@
   color: red;
   font-size: 13px;
 }
+
+.back__button {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  margin: 40px;
+  color: #fff;
+  background-color: #25235c;
+  width: fit-content;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  gap: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  cursor: pointer;
+}
+.back__button img {
+  width: 30px;
+}
+
+.back__button:hover {
+  transition: all 0.3s ease-in-out;
+  color: #777;
+}

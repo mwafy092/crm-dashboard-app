@@ -7,6 +7,7 @@
         placeholder="username"
         formControlName="username"
         [formControl]="username"
+        data-cy="registerUsername"
       />
       <div [hidden]="username.valid || username.untouched">
         <div [hidden]="!username.hasError('minlength')" class="error">
@@ -23,6 +24,7 @@
         placeholder="email"
         formControlName="email"
         [formControl]="email"
+        data-cy="registerEmail"
       />
       <div [hidden]="email.valid || email.untouched">
         <div [hidden]="!email.hasError('email')" class="error">
@@ -39,10 +41,11 @@
         placeholder="Password"
         formControlName="password"
         [formControl]="password"
+        data-cy="registerPassword"
       />
       <div [hidden]="password.valid || password.untouched">
         <div [hidden]="!password.hasError('minlength')" class="error">
-          Password should contain at least 8 characters
+          Password should contain at least 4 characters
         </div>
         <div [hidden]="!password.hasError('required')" class="error">
           Password is required

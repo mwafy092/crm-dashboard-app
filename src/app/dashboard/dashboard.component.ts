@@ -13,6 +13,7 @@ import { MessagesService } from '../messages.service';
 export class DashboardComponent implements OnInit, DoCheck {
   customers: CustomerInterface[] = [];
   loggedInUser: string | null = '';
+
   constructor(
     private authService: AuthService,
     private router: Router,

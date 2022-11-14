@@ -17,7 +17,6 @@ export class NavComponent implements OnInit, DoCheck {
   ngOnInit(): void {}
   ngDoCheck(): void {
     this.getDataFromLocalStorage();
-    console.log(this.status);
   }
 
   logout = () => {

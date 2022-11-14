@@ -1,7 +1,10 @@
+<a routerLink="/" class="back__button">
+  <img src="../../assets/icons/back.png" />
+  back
+</a>
 <div class="update__customer">
   <div class="add__customer__container">
     <form [formGroup]="customerForm" (submit)="saveUser()">
-      <h1>Update Customer Information</h1>
       <div class="form__input__unit">
         <input
           type="text"

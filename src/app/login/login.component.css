@@ -3,3 +3,29 @@
   display: flex;
   justify-content: center;
 }
+h2 {
+  color: #25235c;
+  font-size: 20px;
+}
+.login__header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 20px 0;
+  gap: 10px;
+}
+.login__header h1 {
+  color: #4d4b82;
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+.login__header img {
+  width: 120px;
+  margin: 0;
+  border: 4px solid #25235c;
+  border-radius: 50%;
+  padding: 10px;
+}

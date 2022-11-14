@@ -21,12 +21,102 @@
   font-weight: bold;
   display: block;
   margin: 40px;
-  color: #5487ee;
+  color: #fff;
+  background-color: #25235c;
   width: fit-content;
-  text-decoration: underline;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  gap: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  cursor: pointer;
+}
+.back__button img {
+  width: 30px;
 }
 
 .back__button:hover {
   transition: all 0.3s ease-in-out;
-  color: #0c41aa;
+  color: #777;
+}
+
+.card__container {
+  background-color: #fff;
+  width: 450px;
+  height: 400px;
+  border-radius: 10px;
+  border-left: 8px solid #25235c;
+  color: #25235c;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px;
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.card__profile {
+  border: 2px solid #25235c;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.card__profile img {
+  object-fit: contain;
+  width: 100%;
+  display: block;
+  z-index: 10;
+}
+
+.card__main__info {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 10px 0;
+}
+.card__main__info p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.card__name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card__role {
+  font-size: 16px;
+  color: #aaa;
+}
+
+.card__bio {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.card__email {
+  background-color: #25235c;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.card__main__container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

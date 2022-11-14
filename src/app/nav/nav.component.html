@@ -2,10 +2,14 @@
   <div class="navbar__logo">Customer Management</div>
   <ul class="navbar__left">
     <li *ngIf="status === 'true'"><a routerLink="/">Dashboard</a></li>
-    <li *ngIf="status !== 'true'"><a routerLink="/login">Login</a></li>
-    <li *ngIf="status !== 'true'"><a routerLink="/register">Register</a></li>
+    <li *ngIf="status !== 'true'">
+      <a routerLink="/login" data-cy="loginLink">Login</a>
+    </li>
+    <li *ngIf="status !== 'true'">
+      <a routerLink="/register" data-cy="registerLink">Register</a>
+    </li>
     <li *ngIf="status === 'true'">
-      <a (click)="logout()" class="logout__button">Logout</a>
+      <a (click)="logout()" class="logout__button" data-cy="logout">Logout</a>
     </li>
   </ul>
 </nav>

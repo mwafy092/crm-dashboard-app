@@ -6,7 +6,7 @@ import { MessagesService } from '../messages.service';
   styleUrls: ['./messages.component.css'],
 })
 export class MessagesComponent implements OnInit, DoCheck {
-  messages: string[] = [];
+  messages: string[] = ['nice to meet me'];
   constructor(private messagesService: MessagesService) {}
 
   ngOnInit(): void {

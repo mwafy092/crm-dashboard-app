@@ -1,18 +1,30 @@
+<div class="login__header">
+  <h1>Manage Your Customers With Just One Tool</h1>
+  <img src="https://avatars.dicebear.com/api/bottts/nice.svg" />
+</div>
 <div class="login__register">
   <form [formGroup]="form" (submit)="submit()">
-    <h1>Please sign in</h1>
+    <h2>Please sign in</h2>
 
     <div class="form__input__unit">
-      <input type="email" placeholder="email" formControlName="email" />
+      <input
+        type="email"
+        placeholder="email"
+        formControlName="email"
+        data-cy="email"
+      />
     </div>
     <div class="form__input__unit">
       <input
         type="password"
         placeholder="Password"
         formControlName="password"
+        data-cy="password"
       />
     </div>
 
-    <button class="form__submit__btn" type="submit">Sign in</button>
+    <button class="form__submit__btn" type="submit" data-cy="submit">
+      Sign in
+    </button>
   </form>
 </div>

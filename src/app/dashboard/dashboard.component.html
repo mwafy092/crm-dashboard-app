@@ -1,43 +1,48 @@
-<div class="customers__container">
-  <h1 class="dashboard__header">Welcome {{ loggedInUser }} to the dashboard</h1>
-  <button class="add__customer__button" routerLink="/add-customer">
-    Add Customer <span class="button__add__icon">+</span>
+<div class="dashboard__container">
+  <button class="add__button" routerLink="/add-customer">
+    Add Customer <img src="../../assets/icons/add.png" />
   </button>
-  <table class="customers__table">
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Role</th>
-      <th>Action</th>
-    </tr>
-    <tr *ngFor="let customer of customers">
-      <td>{{ customer.name }}</td>
-      <td>{{ customer.age }}</td>
-      <td>{{ customer.email }}</td>
-      <td>{{ customer.phone }}</td>
-      <td>{{ customer.role }}</td>
-      <td>
-        <button
-          class="customer__delete__btn"
+  <div class="cards__container">
+    <div class="card__container" *ngFor="let customer of customers">
+      <div class="card__actions">
+        <a routerLink="/customer-details/{{ customer.id }}">
+          <img src="../../assets/icons/more.png" />
+        </a>
+        <a routerLink="/update-customer/{{ customer.id }}">
+          <img src="../../assets/icons/edit.png" />
+        </a>
+        <img
+          src="../../assets/icons/delete.png"
           (click)="deleteCustomer(customer.id)"
-        >
-          Delete
-        </button>
-        <a
-          class="customer__show__btn"
-          routerLink="/customer-details/{{ customer.id }}"
-        >
-          Show More
-        </a>
-        <a
-          class="customer__show__btn"
-          routerLink="/update-customer/{{ customer.id }}"
-        >
-          Update
-        </a>
-      </td>
-    </tr>
-  </table>
+        />
+      </div>
+      <div class="card__profile">
+        <img
+          [src]="
+            'https://avatars.dicebear.com/api/adventurer/' +
+            customer.name +
+            '.svg'
+          "
+        />
+      </div>
+      <div class="card__main__info">
+        <p class="card__name">{{ customer.name }}</p>
+        <p class="card__role">{{ customer.role }}</p>
+      </div>
+      <div class="card__bio">
+        {{ customer.name }} he is {{ customer.age }} years old, and he is
+        working as {{ customer.role }}.
+      </div>
+      <div class="card__contact">
+        <div class="card__email">
+          <img src="../../assets/icons/email.png" />
+          {{ customer.email }}
+        </div>
+        <div class="card__phone">
+          <img src="../../assets/icons/phone.png" />
+          {{ customer.phone }}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

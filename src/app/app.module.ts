@@ -17,6 +17,8 @@ import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { MessagesComponent } from './messages/messages.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +42,9 @@ import { UpdateCustomerComponent } from './update-customer/update-customer.compo
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
     }),
+
     FormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

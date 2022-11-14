@@ -1,7 +1,20 @@
-<a routerLink="/" class="back__button">Back-/</a>
-<div class="customer__details">
-  <p class="customer__detail">Name: {{ customer?.name }}</p>
-  <p class="customer__detail">Age: {{ customer?.age }}</p>
-  <p class="customer__detail">Email: {{ customer?.email }}</p>
-  <p class="customer__detail">Role: {{ customer?.role }}</p>
+<a routerLink="/" class="back__button">
+  <img src="../../assets/icons/back.png" />
+  back
+</a>
+<div class="card__main__container">
+  <div class="card__container">
+    <div class="card__profile">
+      <img src="https://robohash.org/test.png" />
+    </div>
+    <div class="card__main__info">
+      <p class="card__name">{{ customer?.name }}</p>
+      <p class="card__role">{{ customer?.role }}</p>
+    </div>
+    <div class="card__bio">
+      {{ customer?.name }} he is {{ customer?.age }} years old, and he is
+      working as {{ customer?.role }}.
+    </div>
+    <div class="card__email">{{ customer?.email }}</div>
+  </div>
 </div>

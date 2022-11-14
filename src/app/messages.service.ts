@@ -12,7 +12,7 @@ export class MessagesService {
     this.messages.push(message);
     setTimeout(() => {
       this.clearMessages();
-    }, 3000);
+    }, 4000);
   };
 
   getMessages = (): Observable<string[]> => {
